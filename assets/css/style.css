@@ -1,13 +1,420 @@
-* {
-margin: 0;
-padding: 0;
-box-sizing: border-box;
+/* ==================================================
+   1. СКИДАННЯ СТИЛІВ (RESET) ТА МЕТРИКИ
+   ================================================== */
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
+
 body {
-font-family: Arial, sans-serif;
-background-color: lightblue;
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
+    color: #4a4a4a;
+    background-color: #fff;
 }
+
+ul, ol {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+
 img {
-max-width: 100%;
-display: block;
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Глобальні змінні кольорів */
+:root {
+    --primary-color: #4BAF47;   /* Зелений */
+    --secondary-color: #EEC044; /* Жовтий */
+    --dark-color: #1F1E1A;      /* Темний вугільний */
+    --light-bg: #F8F7F0;        /* Світло-бежевий фон */
+}
+
+/* Базовий контейнер */
+.container {
+    width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+/* Кнопки */
+.btn-primary {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 700;
+    transition: 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: var(--dark-color);
+}
+
+/* ==================================================
+   2. СТИЛІ ДЛЯ МОБІЛЬНИХ ПРИСТРОЇВ (MOBILE FIRST)
+   ================================================== */
+
+/* --- Хедер --- */
+.top-bar {
+    display: none; /* Ховаємо десктопну панель на телефонах */
+}
+
+.main-header {
+    background-color: #fff;
+    padding: 15px 0;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+    position: relative;
+    z-index: 100;
+}
+
+.main-header-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.mobile-logo img {
+    max-height: 40px;
+}
+
+.burger-menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.burger-menu span {
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: var(--dark-color);
+    border-radius: 2px;
+    transition: 0.3s ease;
+}
+
+.nav-menu {
+    display: none; 
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background-color: var(--dark-color);
+    padding: 20px;
+}
+
+.nav-menu.active {
+    display: block;
+}
+
+.nav-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.nav-menu a {
+    color: #fff;
+    font-weight: 700;
+    font-size: 18px;
+    width: 100%;
+}
+
+.nav-menu a.active, .nav-menu a:hover {
+    color: var(--primary-color);
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.action-btn {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.cart-wrapper {
+    position: relative;
+}
+
+.cart-count {
+    position: absolute;
+    top: -8px;
+    right: -8px;
+    background-color: var(--primary-color);
+    color: white;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 2px 6px;
+    border-radius: 50%;
+}
+
+/* --- Секція Hero (Банер) --- */
+.hero {
+    background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), 
+                url("../images/icons/hero.png") no-repeat center center / cover;
+    padding: 80px 0 100px 0;
+    color: #fff;
+    text-align: center;
+    position: relative; /* Необхідно для фіксації маски */
+}
+
+.hero-subtitle {
+    font-size: 13px;
+    letter-spacing: 2px;
+    color: #fff; /* Суцільно білий підзаголовок */
+    font-weight: 700;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.hero-title {
+    font-family: 'Covered By Your Grace', cursive;
+    font-weight: 400; /* Тонке накреслення букв */
+    font-size: 42px;
+    line-height: 1.2;
+    margin-bottom: 15px;
+}
+
+.hero-ampersand {
+    font-family: 'Covered By Your Grace', cursive;
+    color: var(--secondary-color); /* Жовтий колір для & */
+    font-weight: 400;
+    display: inline-block;
+}
+
+.hero-text {
+    font-size: 14px;
+    margin-bottom: 25px;
+    opacity: 0.9;
+}
+
+.hero-btn-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.hero-btn-decor {
+    width: 70px; /* Збільшений розмір листочків */
+    height: auto;
+    object-fit: contain;
+}
+
+/* --- Секція Картки Переваг (Features) --- */
+.features {
+    margin-top: -40px;
+    position: relative;
+    z-index: 10;
+}
+
+.features-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.feature-card {
+    background: #fff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+    text-align: center;
+}
+
+.feature-num {
+    font-family: 'Covered By Your Grace', cursive;
+    color: var(--secondary-color);
+    font-size: 22px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.feature-card h3 {
+    font-size: 18px;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.feature-img img {
+    border-radius: 8px;
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+}
+
+/* ==================================================
+   3. МЕДІАЗАПИТИ ДЛЯ БРЕНДПОІНТІВ (АДАПТИВ)
+   ================================================== */
+
+@media (min-width: 481px) {
+    .container { max-width: 450px; }
+}
+
+@media (min-width: 769px) {
+    .container { max-width: 720px; }
+    
+    .features-wrapper {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .feature-card {
+        flex: 1 1 calc(50% - 10px);
+    }
+}
+
+@media (min-width: 1025px) {
+    .container { max-width: 960px; }
+
+    .burger-menu, .mobile-logo {
+        display: none;
+    }
+
+    .top-bar {
+        display: block;
+        background-color: #fff;
+        padding: 12px 0;
+        border-bottom: 1px solid #f2f1e8;
+    }
+
+    .top-bar-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .top-bar-info {
+        display: flex;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .social-links {
+        display: flex;
+        gap: 12px;
+    }
+
+    .contact-item {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        font-size: 13px;
+    }
+
+    .contact-item span {
+        display: block;
+        color: #777;
+    }
+
+    .contact-item a, .contact-item p {
+        font-weight: 700;
+        color: var(--dark-color);
+    }
+
+    /* Чисте десктопне меню без тіні */
+    .main-header {
+        background-color: #fff;
+        padding: 25px 0; 
+        box-shadow: none;       
+    }
+
+    .nav-menu {
+        display: block !important;
+        position: static;
+        background: transparent;
+        padding: 0;
+        width: auto;
+    }
+
+    .nav-menu ul {
+        flex-direction: row;
+        gap: 25px;
+    }
+
+    .nav-menu a {
+        color: var(--dark-color);
+        font-size: 15px;
+        padding: 10px 0;
+    }
+
+    /* Десктопний банер  */
+    .hero {
+        text-align: left;
+        padding: 160px 0 200px 0;
+    }
+
+    /*  рваний білий край  */
+    .hero::before {
+        content: "";
+        position: absolute;
+        top: -2px; /* Притискаємо впритул до меню */
+        left: 0;
+        width: 100%;
+        height: 22px; /* Фіксована акуратна висота хвилі */
+        background: url("../images/icons/bg.png") no-repeat center top;
+        background-size: 100% 100%;
+        z-index: 5; /* Виштовхує маску поверх темного фону hero */
+        pointer-events: none;
+    }
+
+    .hero-title {
+        font-size: 78px;
+        line-height: 1.1;
+    }
+
+    .hero-text {
+        font-size: 16px;
+        max-width: 500px;
+    }
+
+    .hero-btn-group {
+        justify-content: flex-start;
+    }
+
+    .hero-btn-decor {
+        width: 95px; /* Листочки для десктопу */
+    }
+
+    .features {
+        margin-top: -80px;
+    }
+
+    .features-wrapper {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+
+    .feature-card {
+        flex: 1;
+    }
+}
+
+@media (min-width: 1201px) {
+    .container { max-width: 1170px; }
+    
+    .hero-title {
+        font-size: 90px;
+    }
 }

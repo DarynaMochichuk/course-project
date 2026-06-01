@@ -2,29 +2,132 @@
 <html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-        content="width=device-width, initial-scale=1.0">
-    <title>Web Practice</title>
-    <link rel="stylesheet"
-        href="assets/css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agrios - Agriculture Eco Farming</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Covered+By+Your+Grace&family=Manrope:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <h1>Мій вебпроєкт</h1>
+
+    <header class="header">
+        <div class="top-bar">
+            <div class="container top-bar-wrapper">
+                <div class="logo">
+                    <img src="assets/images/icons/logo.png" alt="Agrios Logo">
+                </div>
+                <div class="top-bar-info">
+                    <div class="social-links">
+                        <a href="#"><img src="assets/images/icons/twitter.jpg" alt="Twitter"></a>
+                        <a href="#"><img src="assets/images/icons/facebook.jpg" alt="Facebook"></a>
+                        <a href="#"><img src="assets/images/icons/pinterest.jpg" alt="Pinterest"></a>
+                        <a href="#"><img src="assets/images/icons/instagram.jpg" alt="Instagram"></a>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/images/icons/phone.jpg" alt="Phone">
+                        <div>
+                            <span>Call anytime</span>
+                            <a href="tel:+980009630">+98 (000) - 9630</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/images/icons/email.jpg" alt="Email">
+                        <div>
+                            <span>Send email</span>
+                            <a href="mailto:ambed@agrios.com">ambed@agrios.com</a>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <img src="assets/images/icons/location.jpg" alt="Location">
+                        <div>
+                            <span>380 St Kilda Road</span>
+                            <p>Melbourne, Australia</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="main-header">
+            <div class="container main-header-wrapper">
+                <div class="mobile-logo">
+                    <img src="assets/images/logo.png" alt="Agrios Logo">
+                </div>
+
+                <button class="burger-menu" id="burgerToggle" aria-label="Відкрити меню">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+
+                <nav class="nav-menu" id="navMenu">
+                    <ul>
+                        <li><a href="index.html" class="active">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">Services</a></li>
+                        <li><a href="#">Projects</a></li>
+                        <li><a href="#">News</a></li>
+                        <li><a href="#">Shop</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+
+                <div class="header-actions">
+                    <button class="action-btn search-btn"><img src="assets/images/icons/search.jpg" alt="Search"></button>
+                    <div class="cart-wrapper">
+                        <button class="action-btn cart-btn"><img src="assets/images/icons/cart.jpg" alt="Cart"></button>
+                        <span class="cart-count">0</span>
+                    </div>
+                </div>
+            </div>
+        </div>
     </header>
+
     <main>
-    <section>
-        <h2>Головна секція</h2>
-        <p>
-        Це перша сторінка навчального вебпроєкту.
-        </p>
-    </section>
+<section class="hero">
+    <div class="container">
+        <div class="hero-content">
+            <span class="hero-subtitle">WELCOME TO AGRIOS FARMING</span>
+            <h1 class="hero-title">Agriculture <span class="hero-ampersand">&</span> <br>Eco Farming</h1>
+            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+            <div class="hero-btn-group">
+                <a href="#" class="btn btn-primary">Discover More</a>
+                <img src="assets/images/icons/leaves-decor.png" alt="" class="hero-btn-decor">
+            </div>
+        </div>
+    </div>
+</section>
+
+        <section class="features">
+            <div class="container features-wrapper">
+                <div class="feature-card">
+                    <span class="feature-num">Feature 01</span>
+                    <h3>We're using a new technology</h3>
+                    <div class="feature-img">
+                        <img src="assets/images/icons/feature1.jpg" alt="Technology">
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-num">Feature 02</span>
+                    <h3>Good in smart organic services</h3>
+                    <div class="feature-img">
+                        <img src="assets/images/icons/feature2.jpg" alt="Organic">
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <span class="feature-num">Feature 03</span>
+                    <h3>Reforming in the systems</h3>
+                    <div class="feature-img">
+                        <img src="assets/images/icons/feature3.jpg" alt="Systems">
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
-    <footer>
-    <p>
-    © 2026 Навчальна практика
-    </p>
-    </footer>
+
     <script src="assets/js/main.js"></script>
 </body>
 </html>
