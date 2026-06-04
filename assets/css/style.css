@@ -532,6 +532,8 @@ display: flex;
     background-color: var(--dark-color);
     transform: translateX(10px) scale(1.03); 
 }
+
+
 /* ==================================================
    3. МЕДІАЗАПИТИ ДЛЯ БРЕНДПОІНТІВ (АДАПТИВ)
    ================================================== */
@@ -551,6 +553,7 @@ display: flex;
     .feature-card {
         flex: 1 1 calc(50% - 10px);
     }
+
 }
 
 @media (min-width: 1025px) {
@@ -779,12 +782,264 @@ display: flex;
     .service-card {
         flex: 1; /* Рівномірний розподіл колонок */
     }
-}
 
+}
 @media (min-width: 1201px) {
     .container { max-width: 1170px; }
     
     .hero-title {
         font-size: 90px;
+    }
+}
+/* ==========================================================================
+    ВІДЕО ТА ЗЕЛЕНА ПЛАШКА 
+   ========================================================================== */
+
+/* Батьківський контейнер на всю ширину екрана */
+.video-section {
+    width: 100% !important;
+    background-color: #f6f4ee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+/* Зелена плашка */
+.stats-bar {
+    background-color: #4BAF47;
+    border-radius: 10px;       
+    width: 100%;
+    max-width: 1170px;        
+    height: 184px;          
+    
+    display: flex;             
+    flex-direction: row;       
+    justify-content: space-around; 
+    align-items: center;       
+    padding: 0 40px;
+    box-sizing: border-box;
+       margin-bottom: -92px;      
+    position: relative;
+    z-index: 99;              
+}
+
+/* Тексти всередині зеленої плашки */
+.stats-item {
+    color: #ffffff !important;
+    font-family: 'Manrope', sans-serif;
+    font-size: 18px;         
+    line-height: 30px;         
+    font-weight: 500;          
+    text-align: center;
+    flex: 1;
+}
+
+.video-content-wrapper {
+    background: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)),
+                url("../images/icons/bg2.png") center/cover no-repeat;
+    
+    width: 100vw;              
+    margin-left: calc(50% - 50vw); 
+    height: 691px;            
+    
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 calc((100vw - 1170px) / 2); 
+    box-sizing: border-box;
+}
+
+/* Блок з текстом заголовка */
+.video-text {
+    padding-left: 20px;
+}
+
+/* Великий заголовок */
+.video-text h2 {
+    font-family: 'Manrope', sans-serif;
+    font-size: 70px;           
+    font-weight: 800;           
+    line-height: 84px;        
+    letter-spacing: 0%;
+    color: #ffffff;
+    max-width: 540px;         
+    text-align: left;
+    margin: 0;
+}
+
+/* Кругла біла кнопка Play */
+.play-btn {
+    width: 100px;
+    height: 100px;
+    background: #ffffff;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease;
+    text-decoration: none;
+    box-shadow: 0 0 0 12px rgba(255, 255, 255, 0.2);
+    margin-right: 20px;
+}
+
+.play-btn:hover {
+    transform: scale(1.08);
+}
+
+/* Іконка всередині кнопки */
+.play-btn svg {
+    width: 25.72px;            
+    height: 30px;              
+    margin-left: 6px; 
+}
+
+.play-btn svg path {
+    fill: #1F1E17;             
+}
+
+  /* АДАПТИВНІСТЬ */
+@media (max-width: 1200px) {
+    .stats-bar {
+        max-width: 90%;
+        padding: 0 20px;
+    }
+    .video-content-wrapper {
+        padding: 0 5%;
+        width: 100%;
+        margin-left: 0;
+    }
+    .video-text h2 {
+        font-size: 50px;
+        line-height: 62px;
+        max-width: 450px;
+    }
+}
+
+@media (max-width: 1024px) {
+    .stats-bar {
+        flex-wrap: wrap;
+        gap: 15px;
+        height: auto;
+        padding: 25px 20px;
+        margin-bottom: -60px;
+    }
+    .stats-item {
+        flex: 1 1 40%;
+        font-size: 16px;
+    }
+}
+
+/*    АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ ТЕЛЕФОНІВ */
+@media (max-width: 768px) {
+    .stats-bar {
+        flex-direction: column;
+        max-width: 95%;
+        height: auto;
+        padding: 30px 20px;
+        gap: 20px;
+        margin-bottom: 0;
+    }
+
+    .stats-item {
+        flex: none;
+        width: 100%;
+    }
+
+    .video-content-wrapper {
+        flex-direction: column;
+        justify-content: center;
+        gap: 40px;
+        text-align: center;
+        height: auto;
+        padding: 60px 20px;
+    }
+
+    .video-text h2 {
+        font-size: 32px;
+        line-height: 42px;
+        text-align: center;
+    }
+}
+/* EXPLORE PROJECTS) */
+
+.projects-section {
+    padding: 120px 0;
+    background-color: #ffffff;
+    text-align: center;
+}
+
+.projects-header {
+    margin-bottom: 50px;
+}
+
+.projects-subtitle {
+    font-family: 'Covered By Your Grace', cursive;
+    color: var(--secondary-color); 
+    font-size: 22px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.projects-title {
+    font-size: 48px;
+    color: var(--dark-color);
+    font-weight: 800;
+}
+
+/* Сітка для карток (десктоп за замовчуванням) */
+.projects-grid {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px; /* Відступи між картками */
+    max-width: 1170px;
+    margin: 0 auto;
+}
+
+.project-card {
+    flex: 1;
+    height: 480px; 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border-radius: 12px; 
+    position: relative;
+    overflow: hidden;
+        background-image: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0) 50%);
+}
+
+.project-info {
+    position: absolute;
+    bottom: 35px;
+    left: 30px;
+    text-align: left;
+}
+
+.project-info h3 {
+    color: #ffffff;
+    font-size: 24px;
+    font-weight: 800;
+    line-height: 1.2;
+}
+
+/* Адаптивність під мобільні пристрої (екрани менше 768px) */
+@media (max-width: 768px) {
+    .projects-section {
+        padding: 60px 0;
+    }
+
+    .projects-title {
+        font-size: 32px;
+    }
+
+    .projects-grid {
+        flex-direction: column; 
+        padding: 0 15px;
+        gap: 20px;
+    }
+
+    .project-card {
+        height: 350px; 
     }
 }
