@@ -791,9 +791,7 @@ display: flex;
         font-size: 90px;
     }
 }
-/* ==========================================================================
-    ВІДЕО ТА ЗЕЛЕНА ПЛАШКА 
-   ========================================================================== */
+/*    ВІДЕО ТА ЗЕЛЕНА ПЛАШКА  */
 
 /* Батьківський контейнер на всю ширину екрана */
 .video-section {
@@ -1306,5 +1304,306 @@ display: flex ;
         top: auto;
         transform: none;
         margin: 40px auto 0 auto;
+    }
+}
+--------------------------------------
+/*  */
+.why-choose-section {
+    background-color: #ffffff !important; 
+    width: 100% !important;
+    margin-top: 0 !important; 
+    margin-bottom: 0 !important;
+    padding: 0 !important; 
+    box-sizing: border-box;
+    overflow: hidden;
+    display: block;
+}
+
+.why-choose-section::before {
+    content: '';
+    display: block;
+    width: 100%;
+    height: 140px; 
+    background-color: #ffffff !important;
+}
+
+.why-choose-section .why-choose-container {
+    width: 1200px;
+    height: 733.97px;
+    margin: 0 auto !important; 
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between; 
+    box-sizing: border-box;
+    background-color: #ffffff !important;
+}
+
+/* фото і плашка */
+
+.why-choose-section .why-choose-image-block {
+    position: relative;
+    width: 699.98px;        
+    height: 733.97px;
+    flex-shrink: 0;
+    box-sizing: border-box;
+}
+
+.why-choose-section .main-benefit-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Жовта плашка на фото */
+.why-choose-section .box-quote {
+    position: absolute;
+    width: 306px;          
+    height: 168px;         
+    left: 308.98px;      
+    top: 168.83px;         
+    background: #EEC044;
+    border-radius: 10px 10px 0px 10px;
+    box-sizing: border-box;
+    z-index: 10;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.05);
+    
+    display: flex;
+    align-items: center;
+    justify-content: flex-end; 
+    padding-right: 40px;       
+    padding-left: 20px;
+}
+
+/* Хвостик плашки */
+.why-choose-section .box-quote::after {
+    content: '';
+    box-sizing: border-box;
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    right: 0px;
+    bottom: -29px;
+    border-style: solid;
+    border-width: 30px 0 0 30px;
+    border-color: #EEC044 transparent transparent transparent;
+}
+
+/* текст плашки */
+.why-choose-section .badge-text {
+    font-family: 'Covered By Your Grace', cursive;
+    font-weight: 400;
+    font-size: 30px;
+    line-height: 36px;
+    text-align: center; 
+    color: #FFFFFF;
+    margin: 0;
+        width: 125.02px;    
+    height: 108px;         
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.why-choose-section .why-choose-content-block {
+    width: 500.02px;        
+    height: 733.97px;       
+    flex-shrink: 0;
+    box-sizing: border-box;
+    padding-left: 41.64px;  
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    background-color: #ffffff !important;
+}
+
+.why-choose-section .why-choose-subtitle {
+    font-family: 'Covered By Your Grace', cursive;
+    color: #EEC044;
+    font-size: 22px;
+    display: block;
+    margin-top: 35.7px;     
+    margin-bottom: 8px;
+}
+
+.why-choose-section .why-choose-title,
+.why-choose-section .why-choose-desc,
+.why-choose-section .benefits-list {
+    width: 458.38px;       
+    box-sizing: border-box;
+}
+
+.why-choose-section .why-choose-title {
+    font-family: 'Manrope', sans-serif;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+    color: #1F1E17;
+    margin: 0 0 20px 0;
+}
+
+.why-choose-section .why-choose-desc {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 30px;
+    color: #878680;
+    margin: 0 0 35px 0;
+}
+
+.why-choose-section .benefits-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 40px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.why-choose-section .benefit-item {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.why-choose-section .benefit-icon {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-shrink: 0;
+    margin-top: 3px;
+}
+
+.why-choose-section .icon-green { background-color: #4BAF47; }
+.why-choose-section .icon-light-green { background-color: #C5CE38; }
+.why-choose-section .icon-orange { background-color: #EEC044; }
+
+.why-choose-section .benefit-text-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.why-choose-section .benefit-item-title {
+    font-family: 'Manrope', sans-serif;
+    font-size: 20px;
+    font-weight: 800;
+    color: #1F1E17;
+    margin: 0;
+}
+
+.why-choose-section .benefit-item-desc {
+    font-family: 'Manrope', sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    color: #878680;
+    margin: 0;
+}
+
+.why-choose-section .btn-discover-more {
+    align-self: flex-start;
+    display: inline-block;
+    background-color: #4BAF47;
+    color: #ffffff;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    padding: 18px 38px;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background 0.3s ease;
+    margin-top: auto;      
+    margin-bottom: 5px;
+}
+
+.why-choose-section .btn-discover-more:hover {
+    background-color: #3e9c3a;
+}
+
+/* АДАПТИВНІ СТИЛІ  */
+
+@media (max-width: 1220px) {
+    .why-choose-section::before {
+        display: none !important;
+    }
+
+    .why-choose-section {
+        margin-top: 60px !important;
+        padding: 40px 0 !important;
+    }
+
+    .why-choose-section .why-choose-container {
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+    
+    .why-choose-section .why-choose-image-block {
+        width: 100%;
+        max-width: 699.98px;
+        height: auto;
+        aspect-ratio: 699.98 / 733.97;
+        margin-bottom: 40px;
+    }
+    
+    .why-choose-section .box-quote {
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        justify-content: center;
+        padding: 20px;
+    }
+
+    .why-choose-section .why-choose-content-block {
+        width: 100%;
+        max-width: 699.98px;
+        height: auto;
+        padding-left: 0;    
+    }
+    
+    .why-choose-section .why-choose-subtitle {
+        margin-top: 0;
+    }
+    
+    .why-choose-section .why-choose-title, 
+    .why-choose-section .why-choose-desc, 
+    .why-choose-section .benefits-list {
+        width: 100%;        
+    }
+}
+
+@media (max-width: 576px) {
+    .why-choose-section .box-quote {
+        width: 240px;
+        height: 120px;
+        left: 50%;
+        top: auto;
+        bottom: 20px;
+        transform: translateX(-50%);
+        border-radius: 10px;
+    }
+    .why-choose-section .box-quote::after {
+        display: none;
+    }
+    .why-choose-section .badge-text {
+        font-size: 22px;
+        line-height: 26px;
+        width: 100%;
+        height: auto;
+    }
+    .why-choose-section .why-choose-title {
+        font-size: 32px; 
+        line-height: 40px;
+    }
+    .why-choose-section .btn-discover-more {
+        width: 100%;
+        text-align: center;
     }
 }
