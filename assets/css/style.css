@@ -1607,3 +1607,495 @@ display: flex ;
         text-align: center;
     }
 }
+/* секція відгуків */
+/* ==========================================================================
+   СЕКЦІЯ ВІДГУКІВ (TESTIMONIALS) — БЕЗ ДІРОК
+   ========================================================================== */
+.testimonials-section {
+    background-color: #F8F7F0 !important; 
+    padding-bottom: 60px !important;      
+    margin-bottom: 0 !important;          
+    box-sizing: border-box;
+    width: 100% !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;                   
+}
+
+/* ==========================================================================
+   СЕКЦІЯ НОВИН (NEWS & ARTICLES) — ПОВНЕ ОНОВЛЕННЯ
+   ========================================================================== */
+.news-section {
+    background-color: #ffffff !important;
+    width: 100% !important;
+    margin-top: 0 !important; 
+    margin-bottom: 0 !important;
+    padding-top: 100px !important;          
+    padding-bottom: 100px !important; /* Повертаємо відступ знизу замість бежевої штуки */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;                   
+}
+
+.news-section .news-subtitle {
+    font-family: 'Covered By Your Grace', cursive;
+    color: #EEC044;
+    font-size: 22px;
+    margin-bottom: 8px;
+    display: block;
+    text-align: center;
+}
+
+.news-section .news-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 58px;
+    color: #1F1E17;
+    margin: 0 0 50px 0;
+    text-align: center;
+}
+
+.news-section .news-container {
+    width: 1170px;                                                 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: stretch; /* Картки будуть однакової висоти */
+    box-sizing: border-box;
+}
+
+.news-section .news-card {
+    width: 369.98px;
+    background: #FFFFFF;
+    border-radius: 10px;
+    box-shadow: 0px 2px 14px rgba(0, 0, 0, 0.05); 
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    position: relative; 
+    overflow: visible;                                     
+}
+
+.news-section .card-image-wrapper {
+    width: 100%;
+    height: 299.98px;                                      
+    border-radius: 10px 10px 0 0;
+    overflow: hidden;    
+    position: relative; /* База для дати всередині картинки */
+}
+
+.news-section .news-card-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.news-section .card-content {
+    width: 100%;
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.05);  
+    border-radius: 0 0 10px 10px;
+    padding: 35px 25px 25px 25px;         
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1; /* Рівняє контент по висоті */
+}
+
+/* ДЕСКТОПНЕ ПОЗИЦІОНУВАННЯ ДАТИ */
+.news-section .card-date {
+    position: absolute;
+    z-index: 10;
+    width: 134.77px;       
+    height: 40px;
+    background: #4BAF47;
+    border-radius: 10px;   
+    
+    top: 280px; /* Чітко на межі для великих екранів */           
+    left: 50%;
+    transform: translateX(-50%); 
+    
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 40px;      
+    color: #FFFFFF;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+.news-section .card-meta {
+    display: flex;
+    justify-content: center;               
+    gap: 15px;
+    margin-bottom: 12px;
+}
+
+.news-section .meta-item {
+    font-family: 'Manrope', sans-serif;
+    font-size: 13px;
+    color: #878680;                                
+    font-weight: 500;
+    display: flex;
+    align-items: center;                
+}
+
+.news-section .meta-item i {
+    color: #EEC044;                               
+    margin-right: 6px;                                     
+    font-size: 14px;                                       
+}
+
+.news-section .card-article-title {
+    font-family: 'Manrope', sans-serif;
+    font-weight: 800;
+    font-size: 26px;
+    line-height: 36px;
+    color: #1F1E17;
+    margin: 0;
+    text-align: center;
+}
+
+/* ПОЛНЕ ВИДАЛЕННЯ БЕЖЕВОЇ СМУЖКИ */
+.news-section .news-bottom-space {
+    display: none !important;
+}
+
+/* ==========================================================================
+   АДАПТИВНІ СТИЛІ (МЕДІА-ЗАПИТИ) — ПОВНИЙ ФІКС
+   ========================================================================== */
+
+@media (max-width: 1200px) {
+    .news-section .news-container {
+        width: 100%;
+        padding: 0 20px;
+        flex-direction: column;            
+        align-items: center;
+        gap: 50px;                                        
+    }
+}
+
+@media (max-width: 576px) {
+    .news-section {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important; 
+    }
+
+    .news-section .news-title {
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 35px;
+    }
+    
+    .news-section .news-card {
+        width: 100%;
+        max-width: 369.98px;                
+    }
+
+    .news-section .card-image-wrapper {
+        height: 230px; /* Фіксуємо висоту картинки на мобільних */
+    }
+
+    /* ПЕРЕНОСИМО ДАТУ ВСЕРЕДИНУ КАРТИНКИ НА МОБІЛЬНИХ (ЩОБ НЕ ПЕРЕКРИВАЛА ТЕКСТ) */
+    .news-section .card-date {
+        top: 15px !important; /* Акуратно згори картинки */
+        left: 15px !important; /* Зліва */
+        transform: none !important; /* Скидаємо центрування */
+        width: 120px;
+        height: 35px;
+        line-height: 35px;
+        font-size: 12px;
+    }
+
+    .news-section .card-content {
+        padding-top: 25px; /* Зменшуємо відступ, бо дата більше не заважає */
+    }
+
+    .news-section .card-article-title {
+        font-size: 22px;
+        line-height: 30px;
+    }
+}
+/*футер*/
+
+.main-footer {
+    background-color: #24231D !important;   
+    color: #A2A29C;                       
+    font-family: 'Manrope', sans-serif;
+    width: 100% !important;
+    box-sizing: border-box;
+    position: relative;                   
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 441px;                       
+    padding-top: 80px;                    
+}
+
+.footer-container {
+    width: 1170px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    box-sizing: border-box;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.col-about   { width: 270px; }
+.col-explore { width: 160px; }
+.col-news    { width: 280px; }
+.col-contact { width: 300px; }
+
+.footer-title {
+    font-size: 20px;
+    font-weight: 800;
+    color: #FFFFFF;
+    margin: 0 0 30px 0;
+    position: relative;
+    padding-bottom: 12px;
+}
+
+.footer-title::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 35px;
+    height: 3px;
+    background-color: #4BAF47;             
+    border-radius: 2px;
+}
+.footer-logo img {
+    max-height: 50px;
+    margin-bottom: 20px;
+    display: block;
+}
+
+.footer-text {
+    font-size: 14px;
+    line-height: 24px;
+    margin: 0 0 25px 0;
+}
+
+.footer-socials {
+    display: flex;
+    gap: 10px;
+}
+
+.footer-socials a {
+    width: 40px;
+    height: 40px;
+    background-color: #1F1E17;             
+    color: #FFFFFF;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    font-size: 14px;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.footer-socials a:hover {
+    background-color: #4BAF47;            
+}
+
+.footer-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-links li {
+    margin-bottom: 12px;
+    position: relative;
+    padding-left: 18px;
+}
+
+.footer-links li::before {
+    content: '➔';
+    position: absolute;
+    left: 0;
+    color: #4BAF47;
+    font-size: 11px;
+    top: 1px;
+}
+
+.footer-links a {
+    color: #A2A29C;
+    text-decoration: none;
+    font-size: 15px;
+    transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+    color: #4BAF47;
+}
+
+.footer-news-item {
+    margin-bottom: 20px;
+}
+
+.news-item-title {
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 700;
+    line-height: 22px;
+    display: block;
+    margin-bottom: 5px;
+    transition: color 0.3s ease;
+}
+
+.news-item-title:hover {
+    color: #4BAF47;
+}
+
+.news-item-date {
+    font-size: 13px;
+    color: #EEC044;                       
+}
+
+.contact-info p {
+    font-size: 14px;
+    margin: 0 0 12px 0;
+    display: flex;
+    align-items: center;
+}
+
+.contact-info i {
+    color: #4BAF47;                         
+    margin-right: 10px;
+    font-size: 14px;
+    width: 15px;
+}
+.footer-subscribe-form {
+    display: flex;
+    margin-top: 25px;
+    width: 100%;
+    position: relative;
+}
+
+.footer-subscribe-form input {
+    width: 100%;
+    background-color: #FFFFFF;
+    border: none;
+    outline: none;
+    padding: 15px 60px 15px 20px;
+    border-radius: 8px;
+    font-family: 'Manrope', sans-serif;
+    font-size: 14px;
+    color: #1F1E17;
+}
+
+.footer-subscribe-form button {
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 100%;
+    width: 50px;
+    background-color: #4BAF47;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 0 8px 8px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer-subscribe-form button:hover {
+    background-color: #3e9c3a;
+}
+
+.footer-bottom {
+    width: 100% !important;
+    background-color: #1F1E17 !important;   
+    height: 70px;                         
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.footer-bottom-container {
+    width: 1170px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.copyright {
+    font-size: 14px;
+    margin: 0;
+}
+
+.bottom-links {
+    display: flex;
+    gap: 10px;
+    font-size: 14px;
+}
+
+.bottom-links a {
+    color: #A2A29C;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.bottom-links a:hover {
+    color: #4BAF47;
+}
+
+/* адаптивність*/
+
+@media (max-width: 1200px) {
+    .main-footer {
+        height: auto;                    
+        padding-bottom: 110px;           
+    }
+    .footer-container, .footer-bottom-container {
+        width: 100%;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
+    .footer-container {
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+    .footer-column {
+        width: calc(50% - 20px) !important; 
+    }
+}
+
+@media (max-width: 576px) {
+    .main-footer {
+        padding-bottom: 130px;
+    }
+    .footer-column {
+        width: 100% !important;            
+    }
+    .footer-bottom {
+        height: auto;                    
+        padding: 20px 0;
+    }
+    .footer-bottom-container {
+        flex-direction: column;          
+        gap: 12px;
+        text-align: center;
+    }
+}
