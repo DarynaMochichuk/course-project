@@ -718,6 +718,7 @@ display: flex;
     .feature-card {
         flex: 1;
     }
+
     /* --- Адаптація секції About для десктопу --- */
     .about-wrapper {
         flex-direction: row; 
@@ -885,7 +886,6 @@ display: flex;
     transform: scale(1.08);
 }
 
-/* Іконка всередині кнопки */
 .play-btn svg {
     width: 25.72px;            
     height: 30px;              
@@ -896,7 +896,6 @@ display: flex;
     fill: #1F1E17;             
 }
 
-  /* АДАПТИВНІСТЬ */
 @media (max-width: 1200px) {
     .stats-bar {
         max-width: 90%;
@@ -928,7 +927,6 @@ display: flex;
     }
 }
 
-/*    АДАПТИВНІСТЬ ДЛЯ МОБІЛЬНИХ ТЕЛЕФОНІВ */
 @media (max-width: 768px) {
     .stats-bar {
         flex-direction: column;
@@ -959,7 +957,7 @@ display: flex;
         text-align: center;
     }
 }
-/* EXPLORE PROJECTS) */
+/* EXPLORE PROJECTS */
 
 .projects-section {
     padding: 120px 0;
@@ -1086,7 +1084,6 @@ display: flex ;
     box-sizing: border-box;
 }
 
-/*ЛІВА КОЛОНКА*/
 .testimonials-left {
     flex: 0 0 400px; 
     width: 400px;
@@ -1135,7 +1132,6 @@ display: flex ;
     background-color: #3e903a;
 }
 
-/* ПРАВА КОЛОНКА */
 .testimonials-right {
     flex: 0 0 770px; 
     width: 770px;
@@ -1268,7 +1264,6 @@ display: flex ;
     z-index: 4;
 }
 
-/* АДАПТИВНІСТЬ */
 @media (max-width: 1200px) {
     .testimonials-container {
         flex-direction: column;
@@ -1307,7 +1302,7 @@ display: flex ;
     }
 }
 --------------------------------------
-/*  */
+
 .why-choose-section {
     background-color: #ffffff !important; 
     width: 100% !important;
@@ -1339,7 +1334,6 @@ display: flex ;
     background-color: #ffffff !important;
 }
 
-/* фото і плашка */
 
 .why-choose-section .why-choose-image-block {
     position: relative;
@@ -1376,7 +1370,6 @@ display: flex ;
     padding-left: 20px;
 }
 
-/* Хвостик плашки */
 .why-choose-section .box-quote::after {
     content: '';
     box-sizing: border-box;
@@ -1390,7 +1383,6 @@ display: flex ;
     border-color: #EEC044 transparent transparent transparent;
 }
 
-/* текст плашки */
 .why-choose-section .badge-text {
     font-family: 'Covered By Your Grace', cursive;
     font-weight: 400;
@@ -1525,7 +1517,6 @@ display: flex ;
     background-color: #3e9c3a;
 }
 
-/* АДАПТИВНІ СТИЛІ  */
 
 @media (max-width: 1220px) {
     .why-choose-section::before {
@@ -1608,9 +1599,7 @@ display: flex ;
     }
 }
 /* секція відгуків */
-/* ==========================================================================
-   СЕКЦІЯ ВІДГУКІВ (TESTIMONIALS) — БЕЗ ДІРОК
-   ========================================================================== */
+
 .testimonials-section {
     background-color: #F8F7F0 !important; 
     padding-bottom: 60px !important;      
@@ -1622,16 +1611,14 @@ display: flex ;
     align-items: center;                   
 }
 
-/* ==========================================================================
-   СЕКЦІЯ НОВИН (NEWS & ARTICLES) — ПОВНЕ ОНОВЛЕННЯ
-   ========================================================================== */
+/* NEWS & ARTICLES*/
 .news-section {
     background-color: #ffffff !important;
     width: 100% !important;
     margin-top: 0 !important; 
     margin-bottom: 0 !important;
     padding-top: 100px !important;          
-    padding-bottom: 100px !important; /* Повертаємо відступ знизу замість бежевої штуки */
+    padding-bottom: 100px !important; 
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
@@ -1662,7 +1649,7 @@ display: flex ;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    align-items: stretch; /* Картки будуть однакової висоти */
+    align-items: stretch;
     box-sizing: border-box;
 }
 
@@ -1683,7 +1670,7 @@ display: flex ;
     height: 299.98px;                                      
     border-radius: 10px 10px 0 0;
     overflow: hidden;    
-    position: relative; /* База для дати всередині картинки */
+    position: relative; 
 }
 
 .news-section .news-card-image {
@@ -1702,10 +1689,9 @@ display: flex ;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
-    flex-grow: 1; /* Рівняє контент по висоті */
+    flex-grow: 1; 
 }
 
-/* ДЕСКТОПНЕ ПОЗИЦІОНУВАННЯ ДАТИ */
 .news-section .card-date {
     position: absolute;
     z-index: 10;
@@ -1714,7 +1700,7 @@ display: flex ;
     background: #4BAF47;
     border-radius: 10px;   
     
-    top: 280px; /* Чітко на межі для великих екранів */           
+    top: 280px;           
     left: 50%;
     transform: translateX(-50%); 
     
@@ -1759,14 +1745,11 @@ display: flex ;
     text-align: center;
 }
 
-/* ПОЛНЕ ВИДАЛЕННЯ БЕЖЕВОЇ СМУЖКИ */
 .news-section .news-bottom-space {
     display: none !important;
 }
 
-/* ==========================================================================
-   АДАПТИВНІ СТИЛІ (МЕДІА-ЗАПИТИ) — ПОВНИЙ ФІКС
-   ========================================================================== */
+/* МЕДІА-ЗАПИТИ */
 
 @media (max-width: 1200px) {
     .news-section .news-container {
@@ -1796,14 +1779,13 @@ display: flex ;
     }
 
     .news-section .card-image-wrapper {
-        height: 230px; /* Фіксуємо висоту картинки на мобільних */
+        height: 230px; 
     }
 
-    /* ПЕРЕНОСИМО ДАТУ ВСЕРЕДИНУ КАРТИНКИ НА МОБІЛЬНИХ (ЩОБ НЕ ПЕРЕКРИВАЛА ТЕКСТ) */
     .news-section .card-date {
-        top: 15px !important; /* Акуратно згори картинки */
-        left: 15px !important; /* Зліва */
-        transform: none !important; /* Скидаємо центрування */
+        top: 15px !important; 
+        left: 15px !important; 
+        transform: none !important;
         width: 120px;
         height: 35px;
         line-height: 35px;
@@ -1811,7 +1793,7 @@ display: flex ;
     }
 
     .news-section .card-content {
-        padding-top: 25px; /* Зменшуємо відступ, бо дата більше не заважає */
+        padding-top: 25px; 
     }
 
     .news-section .card-article-title {
@@ -2098,4 +2080,221 @@ display: flex ;
         gap: 12px;
         text-align: center;
     }
+}
+/* --- Стилі для додаткових сторінок  --- */
+.page-banner {
+    background-color: #F8F7F0;
+    padding: 60px 0;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+}
+
+.banner-subtitle {
+    font-family: 'Covered By Your Grace', cursive;
+    color: var(--secondary-color);
+    font-size: 24px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.banner-title {
+    font-size: 48px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 15px;
+}
+
+.breadcrumbs {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+    font-weight: 600;
+    color: #878680;
+}
+
+.breadcrumbs a {
+    color: var(--dark-color);
+    transition: color 0.3s;
+}
+
+.breadcrumbs a:hover {
+    color: var(--primary-color);
+}
+
+/* Макет контактної сторінки */
+.contact-page-wrapper {
+    display: flex;
+    gap: 50px;
+    align-items: flex-start;
+}
+
+.contact-form-box, .faq-section-box {
+    flex: 1;
+}
+
+.faq-sub {
+    font-family: 'Covered By Your Grace', cursive;
+    color: var(--secondary-color);
+    font-size: 22px;
+    display: block;
+    margin-bottom: 5px;
+}
+
+.faq-main-title {
+    font-size: 36px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 30px;
+}
+
+.styled-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 15px 20px;
+    border: 1px solid #e5e5e0;
+    border-radius: 8px;
+    background-color: #F8F7F0;
+    font-family: 'Manrope', sans-serif;
+    font-size: 15px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    border-color: var(--primary-color);
+    background-color: #fff;
+}
+
+/* Стилі акордеону */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.faq-item {
+    background: #F8F7F0;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.faq-item.active {
+    background: #ffffff;
+    border-color: var(--primary-color);
+    box-shadow: 0 10px 30px rgba(75, 175, 71, 0.08);
+}
+
+.faq-question {
+    padding: 20px 22px;
+    font-weight: 800;
+    font-size: 17px;
+    color: var(--dark-color);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.faq-question i {
+    color: var(--primary-color);
+    transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question i {
+    transform: rotate(180deg);
+}
+
+.faq-answer {
+    padding: 0 22px 22px 22px;
+    display: none;
+    color: #878680;
+    font-size: 15px;
+    line-height: 1.6;
+}
+
+.faq-item.active .faq-answer {
+    display: block;
+}
+
+@media (max-width: 992px) {
+    .contact-page-wrapper {
+        flex-direction: column;
+    }
+}
+/*  Стилі для модального вікна  */
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-overlay.active {
+    display: flex;
+}
+
+.modal-content {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 12px;
+    width: 100%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.2);
+    box-sizing: border-box;
+}
+
+.modal-close {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    background: transparent;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: var(--dark-color);
+    transition: color 0.3s;
+}
+
+.modal-close:hover {
+    color: var(--primary-color);
+}
+
+.modal-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--dark-color);
+    margin-bottom: 20px;
+}
+
+.styled-form label {
+    display: block;
+    font-size: 14px;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--dark-color);
+}
+
+a.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
 }
