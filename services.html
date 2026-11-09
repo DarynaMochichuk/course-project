@@ -23,10 +23,16 @@
                 </button>
                 <nav class="nav-menu" id="navMenu">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="services.html" class="active">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-lang-key="menuHome">Home</a></li>
+                        <li><a href="about.html" data-lang-key="menuAbout">About</a></li>
+                        <li><a href="services.html" class="active" data-lang-key="menuServices">Services</a></li>
+                        <li><a href="contact.html" data-lang-key="menuContact">Contact</a></li>
+                        
+                        <li class="language-switcher" style="display: inline-flex; align-items: center; margin-left: 15px;">
+                            <button id="langUa" class="lang-btn" style="background:none; border:none; cursor:pointer; font-weight:700; color:#878680;">UA</button>
+                            <span style="color: #878680; margin: 0 3px;">/</span>
+                            <button id="langEn" class="lang-btn active" style="background:none; border:none; cursor:pointer; font-weight:700; color:var(--primary-color);">EN</button>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -34,28 +40,26 @@
     </header>
 
     <main>
-        <!-- Шапка сторінки -->
         <section class="page-banner">
             <div class="container">
-                <span class="banner-subtitle">What We Offer</span>
-                <h1 class="banner-title">Our Services</h1>
+                <span class="banner-subtitle" data-lang-key="servicesBannerSub">What We Offer</span>
+                <h1 class="banner-title" data-lang-key="servicesBannerTitle">Our Services</h1>
                 <ul class="breadcrumbs">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" data-lang-key="menuHome">Home</a></li>
                     <li><span>/</span></li>
-                    <li>Services</li>
+                    <li data-lang-key="menuServices">Services</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Секція послуг, де елементи динамічно генеруються через JavaScript з масиву об'єктів -->
         <section class="services" style="padding: 100px 0;">
             <div class="container">
                 <div class="services-header">
-                    <span class="services-subtitle">High Quality Services</span>
-                    <h2 class="services-title">We Provide Organic Solutions</h2>
+                    <span class="services-subtitle" data-lang-key="servSub">High Quality Services</span>
+                    <h2 class="services-title" data-lang-key="servTitle">We Provide Organic Solutions</h2>
                 </div>
                 <div class="services-grid" id="dynamicServicesGrid">
-                    <!-- JavaScript автоматично заповнює цей контейнер картками з масиву -->
+                    <!-- DOM generation -->
                 </div>
             </div>
         </section>
@@ -65,19 +69,19 @@
         <div class="footer-container">
             <div class="footer-column col-about">
                 <div class="footer-logo"><img src="assets/images/icons/logo2.png" alt="Agrios Logo"></div>
-                <p class="footer-text">There are many variations of passages of lorem ipsum available, but the majority suffered.</p>
+                <p class="footer-text" data-lang-key="footerText">There are many variations of passages of lorem ipsum available, but the majority suffered.</p>
             </div>
             <div class="footer-column col-explore">
-                <h3 class="footer-title">Explore</h3>
+                <h3 class="footer-title" data-lang-key="exploreTitle">Explore</h3>
                 <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-lang-key="menuHome">Home</a></li>
+                    <li><a href="about.html" data-lang-key="menuAbout">About</a></li>
+                    <li><a href="services.html" data-lang-key="menuServices">Services</a></li>
+                    <li><a href="contact.html" data-lang-key="menuContact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-column col-contact">
-                <h3 class="footer-title">Contact</h3>
+                <h3 class="footer-title" data-lang-key="contactTitle">Contact</h3>
                 <div class="contact-info">
                     <p><i class="fa-solid fa-phone"></i> 666 888 0000</p>
                     <p><i class="fa-solid fa-envelope"></i> needhelp@company.com</p>
@@ -86,7 +90,7 @@
         </div>
         <div class="footer-bottom">
             <div class="footer-bottom-container">
-                <p class="copyright">© Coursework Project 2026 by Agrios</p>
+                <p class="copyright" data-lang-key="copyrightCourse">© Coursework Project 2026 by Agrios</p>
             </div>
         </div>
     </footer>

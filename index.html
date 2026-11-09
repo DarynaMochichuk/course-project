@@ -29,14 +29,14 @@
                     <div class="contact-item">
                         <img src="assets/images/icons/phone.jpg" alt="Phone">
                         <div>
-                            <span>Call anytime</span>
+                            <span data-lang-key="callAnytime">Call anytime</span>
                             <a href="tel:+980009630">+98 (000) - 9630</a>
                         </div>
                     </div>
                     <div class="contact-item">
                         <img src="assets/images/icons/email.jpg" alt="Email">
                         <div>
-                            <span>Send email</span>
+                            <span data-lang-key="sendEmail">Send email</span>
                             <a href="mailto:ambed@agrios.com">ambed@agrios.com</a>
                         </div>
                     </div>
@@ -44,7 +44,7 @@
                         <img src="assets/images/icons/location.jpg" alt="Location">
                         <div>
                             <span>380 St Kilda Road</span>
-                            <p>Melbourne, Australia</p>
+                            <p data-lang-key="locationCity">Melbourne, Australia</p>
                         </div>
                     </div>
                 </div>
@@ -65,13 +65,19 @@
 
                 <nav class="nav-menu" id="navMenu">
                     <ul>
-                        <li><a href="index.html" class="active">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="#">Services</a></li>
-                        <li><a href="#">Projects</a></li>
-                        <li><a href="#">News</a></li>
-                        <li><a href="#">Shop</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" class="active" data-lang-key="menuHome">Home</a></li>
+                        <li><a href="about.html" data-lang-key="menuAbout">About</a></li>
+                        <li><a href="services.html" data-lang-key="menuServices">Services</a></li>
+                        <li><a href="#" data-lang-key="menuProjects">Projects</a></li>
+                        <li><a href="#" data-lang-key="menuNews">News</a></li>
+                        <li><a href="#" data-lang-key="menuShop">Shop</a></li>
+                        <li><a href="contact.html" data-lang-key="menuContact">Contact</a></li>
+                        
+                        <li class="language-switcher" style="display: inline-flex; align-items: center; margin-left: 15px;">
+                            <button id="langUa" class="lang-btn" style="background:none; border:none; cursor:pointer; font-weight:700; color:#878680;">UA</button>
+                            <span style="color: #878680; margin: 0 3px;">/</span>
+                            <button id="langEn" class="lang-btn active" style="background:none; border:none; cursor:pointer; font-weight:700; color:var(--primary-color);">EN</button>
+                        </li>
                     </ul>
                 </nav>
 
@@ -87,461 +93,396 @@
     </header>
 
     <main>
-<section class="hero">
-    <div class="container">
-        <div class="hero-content">
-            <span class="hero-subtitle">WELCOME TO AGRIOS FARMING</span>
-            <h1 class="hero-title">Agriculture <span class="hero-ampersand">&</span> <br>Eco Farming</h1>
-            <p class="hero-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
-            <div class="hero-btn-group">
-                <a href="#" class="btn btn-primary">Discover More</a>
-                <a href="#" class="btn btn-primary" id="openModalBtn">Book Consultation</a>
-                <img src="assets/images/icons/leaves-decor.png" alt="" class="hero-btn-decor">
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-subtitle" data-lang-key="heroSub">WELCOME TO AGRIOS FARMING</span>
+                    <h1 class="hero-title" data-lang-key="heroTitle">Agriculture <span class="hero-ampersand">&</span> <br>Eco Farming</h1>
+                    <p class="hero-text" data-lang-key="heroText">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.</p>
+                    <div class="hero-btn-group">
+                        <a href="#" class="btn btn-primary" data-lang-key="btnDiscover">Discover More</a>
+                        <a href="#" class="btn btn-primary" id="openModalBtn" data-lang-key="btnBook">Book Consultation</a>
+                        <img src="assets/images/icons/leaves-decor.png" alt="" class="hero-btn-decor">
+                    </div>
+                </div>
             </div>
-        </div>
-    </div>
-</section>
+        </section>
 
         <section class="features">
             <div class="container features-wrapper">
                 <div class="feature-card">
-                    <span class="feature-num">Feature 01</span>
-                    <h3>We're using a new technology</h3>
+                    <span class="feature-num" data-lang-key="featNum1">Feature 01</span>
+                    <h3 data-lang-key="featTitle1">We're using a new technology</h3>
                     <div class="feature-img">
                         <img src="assets/images/icons/feature1.jpg" alt="Technology">
                     </div>
                 </div>
                 <div class="feature-card">
-                    <span class="feature-num">Feature 02</span>
-                    <h3>Good in smart organic services</h3>
+                    <span class="feature-num" data-lang-key="featNum2">Feature 02</span>
+                    <h3 data-lang-key="featTitle2">Good in smart organic services</h3>
                     <div class="feature-img">
                         <img src="assets/images/icons/feature2.jpg" alt="Organic">
                     </div>
                 </div>
                 <div class="feature-card">
-                    <span class="feature-num">Feature 03</span>
-                    <h3>Reforming in the systems</h3>
+                    <span class="feature-num" data-lang-key="featNum3">Feature 03</span>
+                    <h3 data-lang-key="featTitle3">Reforming in the systems</h3>
                     <div class="feature-img">
                         <img src="assets/images/icons/feature3.jpg" alt="Systems">
                     </div>
                 </div>
             </div>
         </section>
+
         <section class="about">
-    <div class="container about-wrapper">
-        
-        <div class="about-images">
-            <div class="img-large">
-                <img src="assets/images/icons/agriculture.png" alt="Agriculture Product Farm"> 
-            </div>
-            <div class="img-small">
-                <img src="assets/images/icons/agriculture2.png" alt="Farmer hands">
-            </div>
-        </div>
-
-        <div class="about-content">
-            <span class="about-subtitle">Our Introductions</span>
-            <h2 class="about-title">Agriculture & Organic Product Farm</h2>
-            <p class="about-highlight">Agrios is the largest global organic farm.</p>
-            <p class="about-text">
-                There are many variations of passages of lorem ipsum available but the majority have suffered alteration in some form by injected humor or random word which don't look even.
-            </p>
-
-            <div class="about-features">
-                <div class="about-feature-item">
-                    <div class="about-feature-icon">
-                        <img src="assets/images/icons/vegetables.jpg" alt="Icon">
+            <div class="container about-wrapper">
+                <div class="about-images">
+                    <div class="img-large">
+                        <img src="assets/images/icons/agriculture.png" alt="Agriculture Product Farm"> 
                     </div>
-                    <div class="about-feature-info">
-                        <h3>Growing fruits vegetables</h3>
+                    <div class="img-small">
+                        <img src="assets/images/icons/agriculture2.png" alt="Farmer hands">
                     </div>
                 </div>
-                <div class="about-feature-item">
-                    <div class="about-feature-icon">
-                        <img src="assets/images/icons/fruit.jpg" alt="Icon">
+
+                <div class="about-content">
+                    <span class="about-subtitle" data-lang-key="aboutSub">Our Introductions</span>
+                    <h2 class="about-title" data-lang-key="aboutTitle">Agriculture & Organic Product Farm</h2>
+                    <p class="about-highlight" data-lang-key="aboutHighlight">Agrios is the largest global organic farm.</p>
+                    <p class="about-text" data-lang-key="aboutText">
+                        There are many variations of passages of lorem ipsum available but the majority have suffered alteration in some form by injected humor or random word which don't look even.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="about-feature-item">
+                            <div class="about-feature-icon">
+                                <img src="assets/images/icons/vegetables.jpg" alt="Icon">
+                            </div>
+                            <div class="about-feature-info">
+                                <h3 data-lang-key="aboutFeat1">Growing fruits vegetables</h3>
+                            </div>
+                        </div>
+                        <div class="about-feature-item">
+                            <div class="about-feature-icon">
+                                <img src="assets/images/icons/fruit.jpg" alt="Icon">
+                            </div>
+                            <div class="about-feature-info">
+                                <h3 data-lang-key="aboutFeat2">Tips for ripening your fruits</h3>
+                            </div>
+                        </div>
                     </div>
-                    <div class="about-feature-info">
-                        <h3>Tips for ripening your fruits</h3>
+
+                    <ul class="about-list">
+                        <li data-lang-key="aboutList1">Lorem Ipsum is not simply random text.</li>
+                        <li data-lang-key="aboutList2">Making this the first true generator on the internet.</li>
+                    </ul>
+
+                    <a href="#" class="btn btn-primary about-btn" data-lang-key="btnDiscover">Discover More</a>
+                </div>
+            </div>
+        </section>
+
+        <section class="services">
+            <div class="container">
+                <div class="services-header">
+                    <span class="services-subtitle" data-lang-key="servSub">Our Services</span>
+                    <h2 class="services-title" data-lang-key="servTitle">What We Offer</h2>
+                </div>
+
+                <div class="services-grid" id="dynamicServicesGrid">
+                    <!-- DOM generation -->
+                </div>
+            </div>
+        </section>
+
+        <section class="video-section">
+            <div class="container">
+                <div class="stats-bar">
+                    <div class="stats-item" data-lang-key="stat1">Agriculture Products</div>
+                    <div class="stats-item" data-lang-key="stat2">Projects Completed</div>
+                    <div class="stats-item" data-lang-key="stat3">Satisfied Clients</div>
+                    <div class="stats-item" data-lang-key="stat4">Experts Farmers</div>
+                </div>
+
+                <div class="video-content-wrapper">
+                    <div class="video-text">
+                        <h2 data-lang-key="videoTitle">Agriculture Matters to the <br> Future of Development</h2>
+                    </div>
+                    
+                    <div class="video-play-block">
+                        <a href="#" class="play-btn">
+                            <svg width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M24 12.4019C26.6667 13.9415 26.6667 17.7905 24 19.3301L5.25 30.1554C2.58333 31.6951 -0.749998 29.7706 -0.749998 26.6923L-0.749999 5.03974C-0.749999 1.96154 2.58333 0.0370399 5.25 1.57664L24 12.4019Z" fill="#4BAF47"/>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>
+        </section>
 
-            <ul class="about-list">
-                <li>Lorem Ipsum is not simply random text.</li>
-                <li>Making this the first true generator on the internet.</li>
-            </ul>
-
-            <a href="#" class="btn btn-primary about-btn">Discover More</a>
-        </div>
-
-    </div>
-    </section>
-<section class="services">
-    <div class="container">
-        
-        <div class="services-header">
-            <span class="services-subtitle">Our Services</span>
-            <h2 class="services-title">What We Offer</h2>
-        </div>
-
-        <div class="services-grid">
-            
-            <div class="service-card" style="background-image: url('assets/images/icons/apple.png');">
-                <div class="service-icon-badge">
-                    <img src="assets/images/icons/service1.png" alt="Icon">
-                </div>
-                <div class="service-card-bottom">
-                    <h3>Agriculture<br>Products</h3>
-                </div>
-                <a href="#" class="service-readmore-btn">Read More</a>
-            </div>
-
-            <div class="service-card" style="background-image: url('assets/images/icons/tomato.png');">
-                <div class="service-icon-badge">
-                    <img src="assets/images/icons/service2.png" alt="Icon">
-                </div>
-                <div class="service-card-bottom">
-                    <h3>Organic<br>Products</h3>
-                </div>
-                <a href="#" class="service-readmore-btn">Read More</a>
-            </div>
-
-            <div class="service-card" style="background-image: url('assets/images/icons/freshvegetables.png');">
-                <div class="service-icon-badge">
-                    <img src="assets/images/icons/service3.png" alt="Icon">
-                </div>
-                <div class="service-card-bottom">
-                    <h3>Fresh<br>Vegetables</h3>
-                </div>
-                <a href="#" class="service-readmore-btn">Read More</a>
-            </div>
-
-            <div class="service-card" style="background-image: url('assets/images/icons/grapes.png');">
-                <div class="service-icon-badge">
-                    <img src="assets/images/icons/service4.png" alt="Icon">
-                </div>
-                <div class="service-card-bottom">
-                    <h3>Dairy<br>Products</h3>
-                </div>
-                <a href="#" class="service-readmore-btn">Read More</a>
-            </div>
-
-        </div>
-    </div>
-</section>
-
-<section class="video-section">
-    <div class="container">
-        
-        <div class="stats-bar">
-            <div class="stats-item">Agriculture Products</div>
-            <div class="stats-item">Projects Completed</div>
-            <div class="stats-item">Satisfied Clients</div>
-            <div class="stats-item">Experts Farmers</div>
-        </div>
-
-        <div class="video-content-wrapper">
-            <div class="video-text">
-                <h2>Agriculture Matters to the <br> Future of Development</h2>
-            </div>
-            
-            <div class="video-play-block">
-                <a href="#" class="play-btn">
-                    <svg width="26" height="30" viewBox="0 0 26 30" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M24 12.4019C26.6667 13.9415 26.6667 17.7905 24 19.3301L5.25 30.1554C2.58333 31.6951 -0.749998 29.7706 -0.749998 26.6923L-0.749999 5.03974C-0.749999 1.96154 2.58333 0.0370399 5.25 1.57664L24 12.4019Z" fill="#4BAF47"/>
-                    </svg>
-                </a>
-            </div>
-        </div>
-
-    </div>
-</section>
-<section class="projects-section">
-    <div class="container">
-        
-        <div class="projects-header">
-            <span class="projects-subtitle">Recently Completed</span>
-            <h2 class="projects-title">Explore Projects</h2>
-        </div>
-
-        <div class="projects-grid">
-            
-            <div class="project-card" style="background-image: url('assets/images/icons/expprojects1.png');">
-                <div class="project-info">
-                    <h3>Easy <br> Harvesting</h3>
-                </div>
-            </div>
-
-            <div class="project-card" style="background-image: url('assets/images/icons/expprojects2.png');">
-                <div class="project-info">
-                    <h3>Agriculture <br> Farming</h3>
-                </div>
-            </div>
-
-            <div class="project-card" style="background-image: url('assets/images/icons/expprojects4.png');">
-                <div class="project-info">
-                    <h3>Organic <br> Solutions</h3>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</section>
-<section class="testimonials-section">
-    <div class="testimonials-container">
-        
-        <div class="testimonials-left">
-            <span class="testimonials-subtitle">Our Testimonials</span>
-            <h2 class="testimonials-title">What They're <br> Talking About <br> Agrios</h2>
-            <p class="testimonials-desc">
-                There are many variations of passages of available but the majority have suffered alteration in some form by injected humor or random word which don't look even.
-            </p>
-            <a href="#" class="btn-all-testimonials">View All Testimonials</a>
-        </div>
-
-        <div class="testimonials-right">
-            
-            <div class="testimonial-card">
-                
-                <div class="slider-arrows">
-                    <button class="arrow-btn prev-arrow" aria-label="Previous testimonial">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M7 16V3.83L1.41 9.42L0 8L8 0l8 8l-1.41 1.41L9 3.83V16H7z" fill="#1F1E17"/>
-                        </svg>
-                    </button>
-                    <button class="arrow-btn next-arrow" aria-label="Next testimonial">
-                        <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
-                            <path d="M9 0v12.17l5.59-5.59L16 8l-8 8l-8-8l1.41-1.41L7 12.17V0h2z" fill="#1F1E17"/>
-                        </svg>
-                    </button>
+        <section class="projects-section">
+            <div class="container">
+                <div class="projects-header">
+                    <span class="projects-subtitle" data-lang-key="projSub">Recently Completed</span>
+                    <h2 class="projects-title" data-lang-key="projTitle">Explore Projects</h2>
                 </div>
 
-                <p class="testimonial-text">
-                    There are many variations of passages of available but the majority have suffered alteration in some form by injected humor or random word which don't look even.
-                </p>
-                
-                <div class="testimonial-meta">
-                    <h4 class="author-name">Bonnie Tolbert</h4>
-                    <div class="rating-stars">★★★★★</div>
-                </div>
-
-                <div class="author-photo-wrapper">
-                    <div class="photo-dotted-border"></div>
-                    <div class="author-photo"></div> 
-                    <div class="photo-green-badge"></div>
-                </div>
-
-            </div> </div> </div>
-            </section>
-<section class="why-choose-section">
-    <div class="why-choose-container">
-        
-        <div class="why-choose-image-block">
-            <img src="assets/images/icons/field.png" alt="Field" class="main-benefit-image">
-            
-            <div class="box-quote">
-                <p class="badge-text">Agriculture<br>Professional<br>Leader</p>
-            </div>
-        </div>
-
-        <div class="why-choose-content-block">
-            <span class="why-choose-subtitle">Our Farm Benefits</span>
-            <h2 class="why-choose-title">Why Choose Agrios Market</h2>
-            
-            <p class="why-choose-desc">
-                There are many variations of passages of available but the majority have suffered alteration in some form by injected humor or random word which don't look even.
-            </p>
-
-            <ul class="benefits-list">
-                <li class="benefit-item">
-                    <div class="benefit-icon icon-green">
-                        <svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M13 1L4.75 9.25L1 5.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                <div class="projects-grid">
+                    <div class="project-card" style="background-image: url('assets/images/icons/expprojects1.png');">
+                        <div class="project-info">
+                            <h3 data-lang-key="proj1">Easy <br> Harvesting</h3>
+                        </div>
                     </div>
-                    <div class="benefit-text-wrapper">
-                        <h4 class="benefit-item-title">Quality Organic Food</h4>
-                        <p class="benefit-item-desc">There are variation You need to be sure there is anything hidden in the middle of text.</p>
+
+                    <div class="project-card" style="background-image: url('assets/images/icons/expprojects2.png');">
+                        <div class="project-info">
+                            <h3 data-lang-key="proj2">Agriculture <br> Farming</h3>
+                        </div>
                     </div>
-                </li>
-                <li class="benefit-item">
-                    <div class="benefit-icon icon-light-green">
-                        <svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M13 1L4.75 9.25L1 5.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+
+                    <div class="project-card" style="background-image: url('assets/images/icons/expprojects4.png');">
+                        <div class="project-info">
+                            <h3 data-lang-key="proj3">Organic <br> Solutions</h3>
+                        </div>
                     </div>
-                    <div class="benefit-text-wrapper">
-                        <h4 class="benefit-item-title">Professional Farmers</h4>
-                        <p class="benefit-item-desc">There are variation You need to be sure there is anything hidden in the middle of text.</p>
-                    </div>
-                </li>
-                <li class="benefit-item">
-                    <div class="benefit-icon icon-orange">
-                        <svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M13 1L4.75 9.25L1 5.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-                    </div>
-                    <div class="benefit-text-wrapper">
-                        <h4 class="benefit-item-title">Quality Products</h4>
-                        <p class="benefit-item-desc">There are variation You need to be sure there is anything hidden in the middle of text.</p>
-                    </div>
-                </li>
-            </ul>
-
-            <a href="#" class="btn-discover-more">Discover More</a>
-        </div>
-
-    </div>
-</section>
-
-
-
-
-<section class="news-section">
-    
-    <span class="news-subtitle">From the Blog</span>
-    <h2 class="news-title">News & Articles</h2>
-
-    <div class="news-container">
-        
-        <article class="news-card">
-            <span class="card-date">05 July 2022</span>
-            
-            <div class="card-image-wrapper">
-                <img src="assets/images/icons/foto1.png" alt="Bringing Food Production Back To Cities" class="news-card-image">
-            </div>
-            
-            <div class="card-content">
-                <div class="card-meta">
-                    <span class="meta-item"><i class="fa-regular fa-user"></i> Kevin Martin</span>
-                    <span class="meta-item"><i class="fa-regular fa-comment"></i> 1 Comment</span>
                 </div>
-                <h3 class="card-article-title">Bringing Food Production Back To Cities</h3>
             </div>
-        </article>
+        </section>
 
-        <article class="news-card">
-            <span class="card-date">05 July 2022</span>
-            
-            <div class="card-image-wrapper">
-                <img src="" alt="   " class="news-card-image">
-            </div>
-            
-            <div class="card-content">
-                <div class="card-meta">
-                    <span class="meta-item"><i class="fa-regular fa-user"></i> Kevin Martin</span>
-                    <span class="meta-item"><i class="fa-regular fa-comment"></i> 0 Comments</span>
+        <section class="testimonials-section">
+            <div class="testimonials-container">
+                <div class="testimonials-left">
+                    <span class="testimonials-subtitle" data-lang-key="testSub">Our Testimonials</span>
+                    <h2 class="testimonials-title" data-lang-key="testTitle">What They're <br> Talking About <br> Agrios</h2>
+                    <p class="testimonials-desc" data-lang-key="testDesc">
+                        There are many variations of passages of available but the majority have suffered alteration in some form by injected humor or random word which don't look even.
+                    </p>
+                    <a href="#" class="btn-all-testimonials" data-lang-key="testBtn">View All Testimonials</a>
                 </div>
-                <h3 class="card-article-title">The Future of Farming, Smart Irrigation Solutions</h3>
-            </div>
-        </article>
 
-        <article class="news-card">
-            <span class="card-date">05 July 2022</span>
-            
-            <div class="card-image-wrapper">
-                <img src="assets/images/icons/foto3.png" alt="Agronomy and relation to Other Sciences" class="news-card-image">
-            </div>
-            
-            <div class="card-content">
-                <div class="card-meta">
-                    <span class="meta-item"><i class="fa-regular fa-user"></i> Kevin Martin</span>
-                    <span class="meta-item"><i class="fa-regular fa-comment"></i> 0 Comments</span>
+                <div class="testimonials-right">
+                    <div class="testimonial-card">
+                        <div class="slider-arrows">
+                            <button class="arrow-btn prev-arrow" aria-label="Previous testimonial">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M7 16V3.83L1.41 9.42L0 8L8 0l8 8l-1.41 1.41L9 3.83V16H7z" fill="#1F1E17"/>
+                                </svg>
+                            </button>
+                            <button class="arrow-btn next-arrow" aria-label="Next testimonial">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                    <path d="M9 0v12.17l5.59-5.59L16 8l-8 8l-8-8l1.41-1.41L7 12.17V0h2z" fill="#1F1E17"/>
+                                </svg>
+                            </button>
+                        </div>
+
+                        <p class="testimonial-text" data-lang-key="testQuote">
+                            There are many variations of passages of available but the majority have suffered alteration in some form by injected humor or random word which don't look even.
+                        </p>
+                        
+                        <div class="testimonial-meta">
+                            <h4 class="author-name">Bonnie Tolbert</h4>
+                            <div class="rating-stars">★★★★★</div>
+                        </div>
+
+                        <div class="author-photo-wrapper">
+                            <div class="photo-dotted-border"></div>
+                            <div class="photo-photo"></div> 
+                            <div class="photo-green-badge"></div>
+                        </div>
+                    </div>
                 </div>
-                <h3 class="card-article-title">Agronomy and relation to Other Sciences</h3>
             </div>
-</article>
+        </section>
 
-    </div> <div class="news-bottom-space"></div>
+        <section class="why-choose-section">
+            <div class="why-choose-container">
+                <div class="why-choose-image-block">
+                    <img src="assets/images/icons/field.png" alt="Field" class="main-benefit-image">
+                    <div class="box-quote">
+                        <p class="badge-text" data-lang-key="badgeText">Agriculture<br>Professional<br>Leader</p>
+                    </div>
+                </div>
 
-</section>
-<section class="testimonials-section">
-    <div class="testimonials-container">
-        
-        </div>
-</section>
-<footer class="main-footer">
-    <div class="footer-container">
-        
-        <div class="footer-column col-about">
-            <div class="footer-logo">
-                <img src="assets/images/icons/logo2.png" alt="Agrios Logo">
+                <div class="why-choose-content-block">
+                    <span class="why-choose-subtitle" data-lang-key="whySub">Our Farm Benefits</span>
+                    <h2 class="why-choose-title" data-lang-key="whyTitle">Why Choose Agrios Market</h2>
+                    
+                    <p class="why-choose-desc" data-lang-key="whyDesc">
+                        There are many variations of passages of available but the majority have suffered alteration in some form by injected humor or random word which don't look even.
+                    </p>
+
+                    <ul class="benefits-list">
+                        <li class="benefit-item">
+                            <div class="benefit-icon icon-green">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M13 1L4.75 9.25L1 5.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div class="benefit-text-wrapper">
+                                <h4 class="benefit-item-title" data-lang-key="benefit1Title">Quality Organic Food</h4>
+                                <p class="benefit-item-desc" data-lang-key="benefit1Desc">There are variation You need to be sure there is anything hidden in the middle of text.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <div class="benefit-icon icon-light-green">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M13 1L4.75 9.25L1 5.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div class="benefit-text-wrapper">
+                                <h4 class="benefit-item-title" data-lang-key="benefit2Title">Professional Farmers</h4>
+                                <p class="benefit-item-desc" data-lang-key="benefit2Desc">There are variation You need to be sure there is anything hidden in the middle of text.</p>
+                            </div>
+                        </li>
+                        <li class="benefit-item">
+                            <div class="benefit-icon icon-orange">
+                                <svg width="14" height="11" viewBox="0 0 14 11" fill="none"><path d="M13 1L4.75 9.25L1 5.5" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                            </div>
+                            <div class="benefit-text-wrapper">
+                                <h4 class="benefit-item-title" data-lang-key="benefit3Title">Quality Products</h4>
+                                <p class="benefit-item-desc" data-lang-key="benefit3Desc">There are variation You need to be sure there is anything hidden in the middle of text.</p>
+                            </div>
+                        </li>
+                    </ul>
+
+                    <a href="404.html" class="btn-discover-more" data-lang-key="btnDiscover">Discover More</a>
+                </div>
             </div>
-            <p class="footer-text">
-                There are many variations of passages of lorem ipsum available, but the majority suffered.
-            </p>
-            <div class="footer-socials">
-                <a href="#"><i class="fa-brands fa-twitter"></i></a>
-                <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
-                <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
-                <a href="#"><i class="fa-brands fa-instagram"></i></a>
-            </div>
-        </div>
+        </section>
 
-        <div class="footer-column col-explore">
-            <h3 class="footer-title">Explore</h3>
-            <ul class="footer-links">
-                <li><a href="about.html">About</a></li>
-                <li><a href="services.html">Services</a></li>
-                <li><a href="#">Our Projects</a></li>
-                <li><a href="#">Meet the Farmers</a></li>
-                <li><a href="#">Latest News</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </div>
+        <section class="news-section">
+            <span class="news-subtitle" data-lang-key="blogSub">From the Blog</span>
+            <h2 class="news-title" data-lang-key="blogTitle">News & Articles</h2>
 
-        <div class="footer-column col-news">
-            <h3 class="footer-title">News</h3>
-            <div class="footer-news-item">
-                <a href="#" class="news-item-title">Bringing Food Production Back To Cities</a>
-                <span class="news-item-date">July 5, 2022</span>
-            </div>
-            <div class="footer-news-item">
-                <a href="#" class="news-item-title">The Future of Farming, Smart Irrigation Solutions</a>
-                <span class="news-item-date">July 5, 2022</span>
-            </div>
-        </div>
+            <div class="news-container">
+                <article class="news-card">
+                    <span class="card-date">05 July 2022</span>
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/icons/foto1.png" alt="Bringing Food Production Back To Cities" class="news-card-image">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="meta-item"><i class="fa-regular fa-user"></i> Kevin Martin</span>
+                            <span class="meta-item" data-lang-key="comment1">1 Comment</span>
+                        </div>
+                        <h3 class="card-article-title" data-lang-key="news1Title">Bringing Food Production Back To Cities</h3>
+                    </div>
+                </article>
 
-        <div class="footer-column col-contact">
-            <h3 class="footer-title">Contact</h3>
-            <div class="contact-info">
-                <p><i class="fa-solid fa-phone"></i> 666 888 0000</p>
-                <p><i class="fa-solid fa-envelope"></i> needhelp@company.com</p>
-                <p><i class="fa-solid fa-location-dot"></i> 80 broklyn golden street line New York, USA</p>
-            </div>
-            <form class="footer-subscribe-form">
-                <input type="email" placeholder="Your Email Address" required>
-                <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
-            </form>
-        </div>
+                <article class="news-card">
+                    <span class="card-date">05 July 2022</span>
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/icons/foto2.png" alt="Smart Irrigation Solutions" class="news-card-image">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="meta-item"><i class="fa-regular fa-user"></i> Kevin Martin</span>
+                            <span class="meta-item" data-lang-key="comment0">0 Comments</span>
+                        </div>
+                        <h3 class="card-article-title" data-lang-key="news2Title">The Future of Farming, Smart Irrigation Solutions</h3>
+                    </div>
+                </article>
 
-    </div>
-
-    <div class="footer-bottom">
-        <div class="footer-bottom-container">
-            <p class="copyright">© All Copyright 2024 by shawonetc Themes</p>
-            <div class="bottom-links">
-                <a href="#">Terms of Use</a>
-                <span>|</span>
-                <a href="#">Privacy Policy</a>
+                <article class="news-card">
+                    <span class="card-date">05 July 2022</span>
+                    <div class="card-image-wrapper">
+                        <img src="assets/images/icons/foto3.png" alt="Agronomy and relation to Other Sciences" class="news-card-image">
+                    </div>
+                    <div class="card-content">
+                        <div class="card-meta">
+                            <span class="meta-item"><i class="fa-regular fa-user"></i> Kevin Martin</span>
+                            <span class="meta-item" data-lang-key="comment0">0 Comments</span>
+                        </div>
+                        <h3 class="card-article-title" data-lang-key="news3Title">Agronomy and relation to Other Sciences</h3>
+                    </div>
+                </article>
             </div>
-        </div>
-    </div>
-</footer>
+            <div class="news-bottom-space"></div>
+        </section>
     </main>
 
+    <footer class="main-footer">
+        <div class="footer-container">
+            <div class="footer-column col-about">
+                <div class="footer-logo">
+                    <img src="assets/images/icons/logo2.png" alt="Agrios Logo">
+                </div>
+                <p class="footer-text" data-lang-key="footerText">
+                    There are many variations of passages of lorem ipsum available, but the majority suffered.
+                </p>
+                <div class="footer-socials">
+                    <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                    <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#"><i class="fa-brands fa-pinterest-p"></i></a>
+                    <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <div class="footer-column col-explore">
+                <h3 class="footer-title" data-lang-key="exploreTitle">Explore</h3>
+                <ul class="footer-links">
+                    <li><a href="about.html" data-lang-key="menuAbout">About</a></li>
+                    <li><a href="services.html" data-lang-key="menuServices">Services</a></li>
+                    <li><a href="#" data-lang-key="footerProj">Our Projects</a></li>
+                    <li><a href="#" data-lang-key="footerFarmers">Meet the Farmers</a></li>
+                    <li><a href="#" data-lang-key="footerNews">Latest News</a></li>
+                    <li><a href="contact.html" data-lang-key="menuContact">Contact</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column col-news">
+                <h3 class="footer-title" data-lang-key="menuNews">News</h3>
+                <div class="footer-news-item">
+                    <a href="#" class="news-item-title" data-lang-key="news1Title">Bringing Food Production Back To Cities</a>
+                    <span class="news-item-date">July 5, 2022</span>
+                </div>
+                <div class="footer-news-item">
+                    <a href="#" class="news-item-title" data-lang-key="news2Title">The Future of Farming, Smart Irrigation Solutions</a>
+                    <span class="news-item-date">July 5, 2022</span>
+                </div>
+            </div>
+
+            <div class="footer-column col-contact">
+                <h3 class="footer-title" data-lang-key="contactTitle">Contact</h3>
+                <div class="contact-info">
+                    <p><i class="fa-solid fa-phone"></i> 666 888 0000</p>
+                    <p><i class="fa-solid fa-envelope"></i> needhelp@company.com</p>
+                    <p data-lang-key="footerAddress"><i class="fa-solid fa-location-dot"></i> 80 broklyn golden street line New York, USA</p>
+                </div>
+                <form class="footer-subscribe-form">
+                    <input type="email" placeholder="Your Email Address" data-lang-placeholder="emailPlaceholder" required>
+                    <button type="submit"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="footer-bottom-container">
+                <p class="copyright" data-lang-key="copyright">© All Copyright 2024 by shawonetc Themes</p>
+                <div class="bottom-links">
+                    <a href="#" data-lang-key="terms">Terms of Use</a>
+                    <span>|</span>
+                    <a href="#" data-lang-key="privacy">Privacy Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
     <script src="assets/js/main.js"></script>
-<!-- Модальне вікно -->
-<div id="customModal" class="modal-overlay">
-    <div class="modal-content">
-        <button class="modal-close" id="closeModalBtn">&times;</button>
-        <h3 class="modal-title">Order Consultation</h3>
-        <form id="modalForm" class="styled-form">
-            <div class="form-group">
-                <label for="modalName">Ваше ім'я:</label>
-                <input type="text" id="modalName" placeholder="Введіть ім'я" required>
-            </div>
-            <div class="form-group">
-                <label for="modalEmail">Електронна пошта:</label>
-                <input type="email" id="modalEmail" placeholder="example@mail.com" required>
-            </div>
-            <button type="submit" class="btn btn-primary" style="width: 100%;">Submit</button>
-        </form>
+
+    <!-- Модальне вікно -->
+    <div id="customModal" class="modal-overlay">
+        <div class="modal-content">
+            <button class="modal-close" id="closeModalBtn">&times;</button>
+            <h3 class="modal-title" data-lang-key="modalTitle">Order Consultation</h3>
+            <form id="modalForm" class="styled-form">
+                <div class="form-group">
+                    <label for="modalName" data-lang-key="modalNameLabel">Ваше ім'я:</label>
+                    <input type="text" id="modalName" placeholder="Введіть ім'я" data-lang-placeholder="namePlaceholder" required>
+                </div>
+                <div class="form-group">
+                    <label for="modalEmail" data-lang-key="modalEmailLabel">Електронна пошта:</label>
+                    <input type="email" id="modalEmail" placeholder="example@mail.com" required>
+                </div>
+                <button type="submit" class="btn btn-primary" style="width: 100%;" data-lang-key="modalSubmit">Submit</button>
+            </form>
+        </div>
     </div>
-</div>
 </body>
 </html>

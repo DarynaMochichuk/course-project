@@ -23,10 +23,16 @@
                 </button>
                 <nav class="nav-menu" id="navMenu">
                     <ul>
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html" class="active">About</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li><a href="contact.html">Contact</a></li>
+                        <li><a href="index.html" data-lang-key="menuHome">Home</a></li>
+                        <li><a href="about.html" class="active" data-lang-key="menuAbout">About</a></li>
+                        <li><a href="services.html" data-lang-key="menuServices">Services</a></li>
+                        <li><a href="contact.html" data-lang-key="menuContact">Contact</a></li>
+                        
+                        <li class="language-switcher" style="display: inline-flex; align-items: center; margin-left: 15px;">
+                            <button id="langUa" class="lang-btn" style="background:none; border:none; cursor:pointer; font-weight:700; color:#878680;">UA</button>
+                            <span style="color: #878680; margin: 0 3px;">/</span>
+                            <button id="langEn" class="lang-btn active" style="background:none; border:none; cursor:pointer; font-weight:700; color:var(--primary-color);">EN</button>
+                        </li>
                     </ul>
                 </nav>
             </div>
@@ -34,20 +40,18 @@
     </header>
 
     <main>
-        <!-- Хлібні крихти / Шапка сторінки -->
         <section class="page-banner">
             <div class="container">
-                <span class="banner-subtitle">Get to Know Us</span>
-                <h1 class="banner-title">About Our Farm</h1>
+                <span class="banner-subtitle" data-lang-key="aboutBannerSub">Get to Know Us</span>
+                <h1 class="banner-title" data-lang-key="aboutBannerTitle">About Our Farm</h1>
                 <ul class="breadcrumbs">
-                    <li><a href="index.html">Home</a></li>
+                    <li><a href="index.html" data-lang-key="menuHome">Home</a></li>
                     <li><span>/</span></li>
-                    <li>About Us</li>
+                    <li data-lang-key="breadcrumbAbout">About Us</li>
                 </ul>
             </div>
         </section>
 
-        <!-- Основна секція About -->
         <section class="about" style="padding: 100px 0;">
             <div class="container about-wrapper">
                 <div class="about-images">
@@ -55,27 +59,27 @@
                     <div class="img-small"><img src="assets/images/icons/agriculture2.png" alt="Farmer"></div>
                 </div>
                 <div class="about-content">
-                    <span class="about-subtitle">Our Introductions</span>
-                    <h2 class="about-title">Agriculture & Organic Product Farm</h2>
-                    <p class="about-highlight">Agrios is the largest global organic farm network.</p>
-                    <p class="about-text">
+                    <span class="about-subtitle" data-lang-key="aboutSub">Our Introductions</span>
+                    <h2 class="about-title" data-lang-key="aboutTitle">Agriculture & Organic Product Farm</h2>
+                    <p class="about-highlight" data-lang-key="aboutHighlight">Agrios is the largest global organic farm network.</p>
+                    <p class="about-text" data-lang-key="aboutPageText">
                         There are many variations of passages of lorem ipsum available, but the majority have suffered alteration in some form by injected humor or random words.
                     </p>
                     <div class="about-features">
                         <div class="about-feature-item">
                             <div class="about-feature-icon"><img src="assets/images/icons/vegetables.jpg" alt="Icon"></div>
-                            <div class="about-feature-info"><h3>Growing fruits vegetables</h3></div>
+                            <div class="about-feature-info"><h3 data-lang-key="aboutFeat1">Growing fruits vegetables</h3></div>
                         </div>
                         <div class="about-feature-item">
                             <div class="about-feature-icon"><img src="assets/images/icons/fruit.jpg" alt="Icon"></div>
-                            <div class="about-feature-info"><h3>Tips for ripening your fruits</h3></div>
+                            <div class="about-feature-info"><h3 data-lang-key="aboutFeat2">Tips for ripening your fruits</h3></div>
                         </div>
                     </div>
                     <ul class="about-list">
-                        <li>100% certified organic farming methods.</li>
-                        <li>Professional agronomists and modern equipment.</li>
+                        <li data-lang-key="aboutPageList1">100% certified organic farming methods.</li>
+                        <li data-lang-key="aboutPageList2">Professional agronomists and modern equipment.</li>
                     </ul>
-                    <a href="services.html" class="btn btn-primary about-btn">Our Services</a>
+                    <a href="services.html" class="btn btn-primary about-btn" data-lang-key="aboutBtnServices">Our Services</a>
                 </div>
             </div>
         </section>
@@ -85,19 +89,19 @@
         <div class="footer-container">
             <div class="footer-column col-about">
                 <div class="footer-logo"><img src="assets/images/icons/logo2.png" alt="Agrios Logo"></div>
-                <p class="footer-text">There are many variations of passages of lorem ipsum available, but the majority suffered.</p>
+                <p class="footer-text" data-lang-key="footerText">There are many variations of passages of lorem ipsum available, but the majority suffered.</p>
             </div>
             <div class="footer-column col-explore">
-                <h3 class="footer-title">Explore</h3>
+                <h3 class="footer-title" data-lang-key="exploreTitle">Explore</h3>
                 <ul class="footer-links">
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="services.html">Services</a></li>
-                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="index.html" data-lang-key="menuHome">Home</a></li>
+                    <li><a href="about.html" data-lang-key="menuAbout">About</a></li>
+                    <li><a href="services.html" data-lang-key="menuServices">Services</a></li>
+                    <li><a href="contact.html" data-lang-key="menuContact">Contact</a></li>
                 </ul>
             </div>
             <div class="footer-column col-contact">
-                <h3 class="footer-title">Contact</h3>
+                <h3 class="footer-title" data-lang-key="contactTitle">Contact</h3>
                 <div class="contact-info">
                     <p><i class="fa-solid fa-phone"></i> 666 888 0000</p>
                     <p><i class="fa-solid fa-envelope"></i> needhelp@company.com</p>
@@ -106,7 +110,7 @@
         </div>
         <div class="footer-bottom">
             <div class="footer-bottom-container">
-                <p class="copyright">© Coursework Project 2026 by Agrios</p>
+                <p class="copyright" data-lang-key="copyrightCourse">© Coursework Project 2026 by Agrios</p>
             </div>
         </div>
     </footer>
