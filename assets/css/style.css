@@ -881,7 +881,7 @@ img {
     font-size: 70px;           
     font-weight: 800;           
     line-height: 84px;        
-    letter-spacing: 0%;
+    letter-spacing: 0px;
     color: #ffffff;
     max-width: 540px;         
     text-align: left;
